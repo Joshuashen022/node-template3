@@ -15,58 +15,47 @@ codec = { package = "parity-scale-codec", version = "2.0.0", default-features = 
 funty = { version = "=1.1.0", default-features = false } # https://github.com/bitvecto-rs/bitvec/issues/105
 serde = { version = "1.0.101", optional = true, features = ["derive"] }
 static_assertions = "1.1.0"
+frame-support = { path = "../7d2de01/frame/support", default-features = false }
+frame-system = { path = "../7d2de01/frame/system", default-features = false }
+frame-executive = { path = "../7d2de01/frame/executive", default-features = false }
 
-frame-system = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-frame-support = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-frame-executive = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
+pallet-balances = { path = "../7d2de01/frame/balances", default-features = false }
+pallet-collective = { path = "../7d2de01/frame/collective", default-features = false }
 
-#pallet-authorship = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-pallet-balances = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-pallet-collective = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-#pallet-membership = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-#pallet-elections-phragmen = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
+pallet-babe = { path = "../7d2de01/frame/babe", default-features = false }
+pallet-grandpa = { path = "../7d2de01/frame/grandpa", default-features = false }
 
-pallet-babe = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-pallet-grandpa = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-#pallet-indices = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
+pallet-randomness-collective-flip = {  path = "../7d2de01/frame/randomness-collective-flip", default-features = false }
+pallet-sudo = {  path = "../7d2de01/frame/sudo", default-features = false }
+pallet-scheduler = {  path = "../7d2de01/frame/scheduler", default-features = false }
+pallet-session = {  path = "../7d2de01/frame/session", default-features = false, features = ["historical"] }
+pallet-staking = {  path = "../7d2de01/frame/staking", default-features = false }
+pallet-staking-reward-curve = {  path = "../7d2de01/frame/staking/reward-curve", default-features = false }
+pallet-transaction-payment = {  path = "../7d2de01/frame/transaction-payment", default-features = false }
+pallet-timestamp = {  path = "../7d2de01/frame/timestamp", default-features = false }
+pallet-utility = { path = "../7d2de01/frame/utility", default-features = false }
 
-#pallet-proxy = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-#pallet-multisig = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-#pallet-recovery = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-pallet-randomness-collective-flip = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-pallet-sudo = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-pallet-scheduler = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-pallet-session = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false, features = ["historical"] }
-pallet-staking = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-pallet-staking-reward-curve = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-pallet-transaction-payment = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-#pallet-treasury = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-#pallet-bounties = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-#pallet-tips = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-pallet-timestamp = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-pallet-utility = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
+sp-std = {  path = "../7d2de01/primitives/std", default-features = false }
+sp-api = {path = "../7d2de01/primitives/api", default-features = false }
+sp-core = { path = "../7d2de01/primitives/core", default-features = false }
+sp-block-builder = { path = "../7d2de01/primitives/block-builder", default-features = false}
 
-sp-std = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-sp-api = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-sp-core = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-sp-block-builder = { default-features = false, git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-
-sp-consensus-babe = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-sp-inherents = { default-features = false, git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sp-offchain = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-sp-runtime = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-sp-session = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-sp-staking = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-sp-transaction-pool = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-sp-version = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
+sp-consensus-babe = { path = "../7d2de01/primitives/consensus/babe", default-features = false }
+sp-inherents = { path = "../7d2de01/primitives/inherents", default-features = false}
+sp-offchain = { path = "../7d2de01/primitives/offchain", default-features = false }
+sp-runtime = { path = "../7d2de01/primitives/runtime", default-features = false }
+sp-session = { path = "../7d2de01/primitives/session", default-features = false }
+sp-staking = { path = "../7d2de01/primitives/staking", default-features = false }
+sp-transaction-pool = { path = "../7d2de01/primitives/transaction-pool", default-features = false }
+sp-version = { path = "../7d2de01/primitives/version", default-features = false }
 
 # Used for the node template's RPCs
-frame-system-rpc-runtime-api = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-pallet-transaction-payment-rpc-runtime-api = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
+frame-system-rpc-runtime-api = { path = "../7d2de01/frame/system/rpc/runtime-api", default-features = false }
+pallet-transaction-payment-rpc-runtime-api = { path = "../7d2de01/frame/transaction-payment/rpc/runtime-api", default-features = false }
 
 # Used for runtime benchmarking
-frame-benchmarking = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false, optional = true }
-frame-system-benchmarking = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false, optional = true }
+frame-benchmarking = { path = "../7d2de01/frame/benchmarking", default-features = false, optional = true }
+frame-system-benchmarking = { path = "../7d2de01/frame/system/benchmarking", default-features = false, optional = true }
 hex-literal = { version = "0.3.1", optional = true }
 
 template = { version = "3.0.0", default-features = false, package = "pallet-template-praos", path = "../pallets/template" }

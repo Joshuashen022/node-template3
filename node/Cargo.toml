@@ -17,44 +17,44 @@ name = "node-template-praos"
 
 [dependencies]
 structopt = "0.3.8"
-sc-cli = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", features = ["wasmtime"] }
-sc-executor = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", features = ["wasmtime"] }
-sc-service = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", features = ["wasmtime"] }
-sc-client-api = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sc-telemetry = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sc-keystore = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sp-core = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sp-inherents = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sp-runtime = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
+sc-cli = { path = "../7d2de01/client/cli", features = ["wasmtime"] }
+sc-executor = { path = "../7d2de01/client/executor", features = ["wasmtime"] }
+sc-service = {  path = "../7d2de01/client/service", features = ["wasmtime"] }
+sc-client-api = { path = "../7d2de01/client/api"}
+sc-telemetry = { path = "../7d2de01/client/telemetry"}
+sc-keystore = { path = "../7d2de01/client/keystore"}
+sp-core = {path = "../7d2de01/primitives/core"}
+sp-inherents = {path = "../7d2de01/primitives/inherents"}
+sp-runtime = {path = "../7d2de01/primitives/runtime"}
 
-sc-transaction-pool = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sp-transaction-pool = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sc-consensus = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sp-consensus = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sc-consensus-babe = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sp-consensus-babe = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sc-finality-grandpa = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sp-finality-grandpa = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
+sc-transaction-pool = {path = "../7d2de01/client/transaction-pool"}
+sp-transaction-pool = {path = "../7d2de01/primitives/transaction-pool"}
+sc-consensus = {path = "../7d2de01/client/consensus/common"}
+sp-consensus = {path = "../7d2de01/primitives/consensus/common"}
+sc-consensus-babe = {path = "../7d2de01/client/consensus/babe"}
+sp-consensus-babe = {path = "../7d2de01/primitives/consensus/babe"}
+sc-finality-grandpa = {path = "../7d2de01/client/finality-grandpa"}
+sp-finality-grandpa = {path = "../7d2de01/primitives/finality-grandpa"}
 
 # These dependencies are used for the node template's RPCs
 jsonrpc-core = "15.1.0"
-sc-rpc = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sc-rpc-api = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sc-basic-authorship = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sp-api = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sp-blockchain = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-sp-block-builder = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-substrate-frame-rpc-system = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-pallet-transaction-payment-rpc = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
+sc-rpc = {path = "../7d2de01/client/rpc"}
+sc-rpc-api = {path = "../7d2de01/client/rpc-api"}
+sc-basic-authorship = {path = "../7d2de01/client/basic-authorship"}
+sp-api = {path = "../7d2de01/primitives/api"}
+sp-blockchain = {path = "../7d2de01/primitives/blockchain"}
+sp-block-builder = {path = "../7d2de01/primitives/block-builder"}
+substrate-frame-rpc-system = {path = "../7d2de01/utils/frame/rpc/system"}
+pallet-transaction-payment-rpc = {path = "../7d2de01/frame/transaction-payment/rpc"}
 
 # These dependencies are used for runtime benchmarking
-frame-benchmarking = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
-frame-benchmarking-cli = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
+frame-benchmarking = {path = "../7d2de01/frame/benchmarking"}
+frame-benchmarking-cli = { path = "../7d2de01/utils/frame/benchmarking-cli"}
 
 node-template-runtime-praos = { version = "3.0.0", path = "../runtime" }
 
 [build-dependencies]
-substrate-build-script-utils = {git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
+substrate-build-script-utils = {path = "../7d2de01/utils/build-script-utils"}
 
 [features]
 default = []
