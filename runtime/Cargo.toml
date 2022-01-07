@@ -1,5 +1,5 @@
 [package]
-name = "node-template-runtime"
+name = "node-template-runtime-praos"
 version = "3.0.0"
 authors = ["Anonymous"]
 edition = "2018"
@@ -70,7 +70,7 @@ frame-benchmarking = { version = "3.0.0", default-features = false, optional = t
 frame-system-benchmarking = { version = "3.0.0", default-features = false, optional = true }
 hex-literal = { version = "0.3.1", optional = true }
 
-template = { version = "3.0.0", default-features = false, package = "pallet-template", path = "../pallets/template" }
+template = { version = "3.0.0", default-features = false, package = "pallet-template-praos", path = "../pallets/template" }
 
 [build-dependencies]
 substrate-wasm-builder = { version = "4.0.0" }

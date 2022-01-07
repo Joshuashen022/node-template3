@@ -1,5 +1,5 @@
 use sp_core::{Pair, Public, sr25519};
-use node_template_runtime::{
+use node_template_runtime_praos::{
 	AccountId, WASM_BINARY, Signature,
 	SessionKeys, StakerStatus, DOLLARS,
 	GenesisConfig, SystemConfig, SudoConfig,
