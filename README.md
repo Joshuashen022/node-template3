@@ -2,6 +2,12 @@
 
 A new FRAME-based Substrate node, ready for hacking :rocket:
 
+Branch: origin/praos
+
+Target: change consensus from `babe` to `praos`
+
+Author: Joshua022
+-----------------
 ## Local Development
 
 Follow these steps to prepare a local Substrate development environment :hammer_and_wrench:
