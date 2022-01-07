@@ -11,18 +11,18 @@ readme = "README.md"
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
-
+#{git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01"}
 [dependencies]
 codec = { package = "parity-scale-codec", version = "2.0.0", default-features = false, features = ["derive"] }
 
-frame-support = { version = "3.0.0", default-features = false }
-frame-system = { version = "3.0.0", default-features = false }
-sp-runtime = { version = "3.0.0", default-features = false }
+frame-support = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
+frame-system = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
+sp-runtime = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
 
 [dev-dependencies]
 serde = { version = "1.0.101" }
-sp-core = { version = "3.0.0", default-features = false }
-sp-io = { version = "3.0.0", default-features = false }
+sp-core = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
+sp-io = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
 
 [features]
 default = ['std']
