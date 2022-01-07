@@ -23,8 +23,8 @@ sp-runtime = { path = "../../7d2de01/primitives/runtime", default-features = fal
 
 [dev-dependencies]
 serde = { version = "1.0.101" }
-sp-core = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
-sp-io = { git = "https://github.com/paritytech/substrate.git",  rev ="7d2de01", default-features = false }
+sp-core = { path = "../../7d2de01/primitives/core", default-features = false }
+sp-io = { path = "../../7d2de01/primitives/io", default-features = false }
 
 [features]
 default = ['std']
