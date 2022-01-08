@@ -111,13 +111,6 @@ pub fn new_partial(config: &Configuration) -> Result<sc_service::PartialComponen
 	})
 }
 
-// fn remote_keystore(_url: &String) -> Result<Arc<LocalKeystore>, &'static str> {
-// 	// FIXME: here would the concrete keystore be built,
-// 	//        must return a concrete type (NOT `LocalKeystore`) that
-// 	//        implements `CryptoStore` and `SyncCryptoStore`
-// 	Err("Remote Keystore not supported.")
-// }
-
 /// Builds a new service for a full client.
 pub fn new_full(mut config: Configuration) -> Result<TaskManager, ServiceError> {
 	let sc_service::PartialComponents {
@@ -256,35 +249,6 @@ pub fn new_full(mut config: Configuration) -> Result<TaskManager, ServiceError> 
 		None
 	};
 
-	// let grandpa_config = sc_finality_grandpa::Config {
-	// 	// FIXME #1578 make this available through chainspec
-	// 	gossip_duration: Duration::from_millis(333),
-	// 	justification_period: 512,
-	// 	name: Some(name),
-	// 	observer_enabled: false,
-	// 	keystore,
-	// 	is_authority: role.is_authority(),
-	// };
-
-	// if enable_grandpa {
-	// 	// start the full GRANDPA voter
-	// 	let grandpa_config = sc_finality_grandpa::GrandpaParams {
-	// 		config: grandpa_config,
-	// 		link: grandpa_link,
-	// 		network,
-	// 		telemetry_on_connect: telemetry_connection_notifier.map(|x| x.on_connect_stream()),
-	// 		voting_rule: sc_finality_grandpa::VotingRulesBuilder::default().build(),
-	// 		prometheus_registry,
-	// 		shared_voter_state: SharedVoterState::empty(),
-	// 	};
-	//
-	// 	// the GRANDPA voter task is considered infallible, i.e.
-	// 	// if it fails we take down the service with it.
-	// 	task_manager.spawn_essential_handle().spawn_blocking(
-	// 		"grandpa-voter",
-	// 		sc_finality_grandpa::run_grandpa_voter(grandpa_config)?
-	// 	);
-	// }
 
 	network_starter.start_network();
 	Ok(task_manager)

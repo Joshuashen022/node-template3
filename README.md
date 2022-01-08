@@ -2,11 +2,11 @@
 
 A new FRAME-based Substrate node, ready for hacking :rocket:
 
-Branch: origin/praos
+**Branch Root:** origin/praos
 
-Target: change consensus from `babe` to `praos`
+**Target:** change consensus from `babe` to `praos`
 
-Done: try to disable GRANDPA -untested - unconfirmed -with_warning
+**Done:** try to disable GRANDPA -untested - unconfirmed -with_warning
 
 Author: Joshua022
 -----------------
