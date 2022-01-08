@@ -6,6 +6,8 @@ Branch: origin/praos
 
 Target: change consensus from `babe` to `praos`
 
+Done: try to disable GRANDPA -untested - unconfirmed -with_warning
+
 Author: Joshua022
 -----------------
 ## Local Development
