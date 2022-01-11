@@ -23,7 +23,7 @@ pallet-balances = { path = "../7d2de01/frame/balances", default-features = false
 pallet-collective = { path = "../7d2de01/frame/collective", default-features = false }
 
 pallet-babe = { path = "../7d2de01/frame/babe", default-features = false }
-pallet-grandpa = { path = "../7d2de01/frame/grandpa", default-features = false }
+#pallet-grandpa = { path = "../7d2de01/frame/grandpa", default-features = false }
 
 pallet-randomness-collective-flip = {  path = "../7d2de01/frame/randomness-collective-flip", default-features = false }
 pallet-sudo = {  path = "../7d2de01/frame/sudo", default-features = false }
@@ -71,7 +71,7 @@ std = [
 #	"frame-support/std",
 	"pallet-balances/std",
 	"pallet-babe/std",
-	"pallet-grandpa/std",
+#	"pallet-grandpa/std",
 	"pallet-collective/std",
 #	"pallet-membership/std",
 #	"pallet-elections-phragmen/std",

@@ -21,8 +21,8 @@ use sp_runtime::traits::{
 };
 use sp_api::impl_runtime_apis;
 use frame_system::{EnsureRoot, EnsureOneOf};
-use pallet_grandpa::{AuthorityId as GrandpaId, AuthorityList as GrandpaAuthorityList};
-use pallet_grandpa::fg_primitives;
+// use pallet_grandpa::{AuthorityId as GrandpaId, AuthorityList as GrandpaAuthorityList};
+// use pallet_grandpa::fg_primitives;
 
 use sp_version::RuntimeVersion;
 #[cfg(feature = "std")]
